@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Colombia - Reservas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="principal">
+        <h1 class="title"><a href="index.html">HOTEL COLOMBIA</a></h1>
+    </div>
+    
+    <header>
+        <nav>
+            <a href="inicio.html">INICIO</a>
+            <a href="index.html">RESERVAR</a>
+            <a href="lista_reservas.html">VER RESERVAS</a>
+            <a href="admin.html">ADMIN</a>
+            <a href="nosotros.html">NOSOTROS</a>
+        </nav>
+    </header>
+
+    <!-- Contenedor de alertas -->
+    <div id="alertContainer"></div>
+
+    <main>
+        <form id="reservationForm">
+            <div class="formulario">
+                <h2>Datos Personales</h2>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" required>
+                
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Escribe tu apellido" required>
+                
+                <label for="correo">Correo</label>
+                <input type="email" name="correo" id="correo" placeholder="Escribe tu correo" required>
+                
+                <label for="telefono">Teléfono</label>
+                <input type="tel" name="telefono" id="telefono" placeholder="Escribe tu teléfono" required>
+            </div>
+
+            <div class="reserva">
+                <h2>Reserva</h2>
+                <label for="fecha_entrada">Fecha de entrada</label>
+                <input type="date" name="fecha_entrada" id="fecha_entrada" required>
+                
+                <label for="fecha_salida">Fecha de salida</label>
+                <input type="date" name="fecha_salida" id="fecha_salida" required>
+                
+                <label for="tipo_habitacion">Tipo de habitación</label>
+                <select name="tipo_habitacion" id="tipo_habitacion" required>
+                    <option value="">Seleccionar...</option>
+                    <option value="sencilla">Sencilla</option>
+                    <option value="doble">Doble</option>
+                    <option value="suite">Suite</option>
+                </select>
+                
+                <label for="num_personas">Número de personas</label>
+                <input type="number" name="num_personas" id="num_personas" min="1" max="10" required>
+                
+                <button type="submit" id="submitBtn">Reservar</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="info">© 2025 Hotel Colombia</div>
+        <div class="links">
+            <a href="#">Privacidad</a>
+            <a href="#">Términos</a>
+            <a href="#">Contacto</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Colombia - Panel Administrativo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="principal">
+        <h1 class="title"><a href="index.html">HOTEL COLOMBIA</a></h1>
+        <p class="subtitle">Panel de Administración</p>
+    </div>
+    
+    <header>
+        <nav>
+            <a href="inicio.html">INICIO</a>
+            <a href="index.html">RESERVAR</a>
+            <a href="lista_reservas.html">VER RESERVAS</a>
+            <a href="admin.html">ADMIN</a>
+            <a href="nosotros.html">NOSOTROS</a>
+        </nav>
+    </header>
+
+    <!-- Contenedor de alertas -->
+    <div id="alertContainer"></div>
+
+    <main class="admin-main">
+        <!-- Estadísticas -->
+        <section class="statistics-section">
+            <h2>📊 Estadísticas</h2>
+            <div id="statisticsContainer">
+                <div class="loading">Cargando estadísticas...</div>
+            </div>
+        </section>
+
+        <!-- Controles y Filtros -->
+        <section class="controls-section">
+            <h2>🔧 Gestión de Reservas</h2>
+            
+            <div class="controls-grid">
+                <div class="control-group">
+                    <h3>Acciones Rápidas</h3>
+                    <div class="button-group">
+                        <button onclick="loadAllReservations()" class="btn btn-primary">
+                            🔄 Cargar Todas las Reservas
+                        </button>
+                        <button onclick="exportData()" class="btn btn-secondary">
+                            📥 Exportar Datos (JSON)
+                        </button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h3>Filtros de Búsqueda</h3>
+                    <div class="filters-grid">
+                        <div class="filter-item">
+                            <label for="filterEstado">Estado:</label>
+                            <select id="filterEstado">
+                                <option value="">Todos los estados</option>
+                                <option value="activa">Activa</option>
+                                <option value="completada">Completada</option>
+                                <option value="cancelada">Cancelada</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-item">
+                            <label for="filterHabitacion">Tipo de Habitación:</label>
+                            <select id="filterHabitacion">
+                                <option value="">Todas las habitaciones</option>
+                                <option value="sencilla">Sencilla</option>
+                                <option value="doble">Doble</option>
+                                <option value="suite">Suite</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-item">
+                            <label for="filterFechaDesde">Desde:</label>
+                            <input type="date" id="filterFechaDesde">
+                        </div>
+
+                        <div class="filter-item">
+                            <label for="filterFechaHasta">Hasta:</label>
+                            <input type="date" id="filterFechaHasta">
+                        </div>
+
+                        <div class="filter-actions">
+                            <button onclick="applyFilters()" class="btn btn-info">🔍 Aplicar Filtros</button>
+                            <button onclick="clearFilters()" class="btn btn-outline">🗑️ Limpiar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabla de Reservas -->
+        <section class="reservations-section">
+            <h2>📋 Lista de Reservas</h2>
+            <div id="adminReservations">
+                <div class="empty-state">
+                    <div class="empty-icon">📋</div>
+                    <h3>Carga las reservas</h3>
+                    <p>Haz clic en "Cargar Todas las Reservas" para ver la información</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="info">© 2025 Hotel Colombia - Panel Administrativo</div>
+        <div class="links">
+            <a href="#">Privacidad</a>
+            <a href="#">Términos</a>
+            <a href="#">Contacto</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
