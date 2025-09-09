@@ -188,6 +188,7 @@ select {
   text-align: justify;
   width: 1000px;
   height: 500px;
+  color: aliceblue;
   border: solid 2px rgba(255, 255, 255, 0.3);
   padding: 10px;
   background: rgba(255, 255, 255, 0.1);
@@ -211,6 +212,7 @@ img {
   border: solid 2px rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   padding: 10px;
+  color: aliceblue;
   transition: transform 0.3s ease;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
@@ -231,6 +233,7 @@ img {
   border: solid 2px rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   padding: 10px;
+  color: aliceblue;
   transition: transform 0.3s ease;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
@@ -251,6 +254,7 @@ img {
   border: solid 2px rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   padding: 10px;
+  color: aliceblue;
   transition: transform 0.3s ease;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);

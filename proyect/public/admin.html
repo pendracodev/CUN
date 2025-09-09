@@ -29,71 +29,19 @@
     <div id="alertContainer"></div>
 
     <main class="admin-main">
-        <!-- Estadísticas -->
-        <section class="statistics-section">
-            <h2>📊 Estadísticas</h2>
-            <div id="statisticsContainer">
-                <div class="loading">Cargando estadísticas...</div>
-            </div>
-        </section>
 
         <!-- Controles y Filtros -->
         <section class="controls-section">
-            <h2>🔧 Gestión de Reservas</h2>
-            
-            <div class="controls-grid">
-                <div class="control-group">
-                    <h3>Acciones Rápidas</h3>
-                    <div class="button-group">
+
+
+
                         <button onclick="loadAllReservations()" class="btn btn-primary">
-                            🔄 Cargar Todas las Reservas
+                             Cargar Todas las Reservas
                         </button>
-                        <button onclick="exportData()" class="btn btn-secondary">
-                            📥 Exportar Datos (JSON)
-                        </button>
-                    </div>
-                </div>
 
-                <div class="control-group">
-                    <h3>Filtros de Búsqueda</h3>
-                    <div class="filters-grid">
-                        <div class="filter-item">
-                            <label for="filterEstado">Estado:</label>
-                            <select id="filterEstado">
-                                <option value="">Todos los estados</option>
-                                <option value="activa">Activa</option>
-                                <option value="completada">Completada</option>
-                                <option value="cancelada">Cancelada</option>
-                            </select>
-                        </div>
 
-                        <div class="filter-item">
-                            <label for="filterHabitacion">Tipo de Habitación:</label>
-                            <select id="filterHabitacion">
-                                <option value="">Todas las habitaciones</option>
-                                <option value="sencilla">Sencilla</option>
-                                <option value="doble">Doble</option>
-                                <option value="suite">Suite</option>
-                            </select>
-                        </div>
 
-                        <div class="filter-item">
-                            <label for="filterFechaDesde">Desde:</label>
-                            <input type="date" id="filterFechaDesde">
-                        </div>
 
-                        <div class="filter-item">
-                            <label for="filterFechaHasta">Hasta:</label>
-                            <input type="date" id="filterFechaHasta">
-                        </div>
-
-                        <div class="filter-actions">
-                            <button onclick="applyFilters()" class="btn btn-info">🔍 Aplicar Filtros</button>
-                            <button onclick="clearFilters()" class="btn btn-outline">🗑️ Limpiar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- Tabla de Reservas -->
